@@ -5,17 +5,16 @@
 }
 
 html {
-	background-color: #222;
-	padding: 0;
-	margin: 0;
+	width: 100%;
+	height: 100%;
 }
 
 body {
-	color: #eee;
-	font-family: helvetica, arial, sans-serif;
+	width: 100%;
+	height: 100%;
 	margin: 0;
-	font-size: 10pt;
-	line-height: 1.3;
+	padding: 0;
+	overflow: hidden;
 }
 
 h1 {
@@ -64,8 +63,12 @@ label {
 	margin-bottom: 48px;
 }
 
+#game {
+	width: 100%;
+	height: 100%;
+}
 
-/* 
+/*
 	Display or hide certain elements depending on platform (mobile/desktop),
 	orientation (landscape/portrait) and webgl support.
 	The body classes .mobile or .desktop and .webgl or .no-webgl are set in
@@ -77,25 +80,31 @@ label {
 
 body.mobile .desktop-only { display: none; }
 body.desktop .mobile-only { display: none; }
+body.desktop .desktop-only { display: none; }
 
 body.webgl .no-webgl-only { display: none; }
 body.no-webgl .webgl-only { display: none; }
 
 body.desktop {
-	padding: 32px 0 128px 0;
-	width: 640px;
-	margin: 0 auto;
+	/*padding: 32px 0 128px 0;*/
+	/*width: 640px;*/
+	/*margin: 0 auto;*/
 }
 
 body.mobile {
-	padding: 0;
-	width: auto;
-	font-size: 8px;
+	/*padding: 0;*/
+	/*width: auto;*/
+	/*font-size: 8px;*/
 }
 
 body.desktop #canvas {
-	width: 640px;
-	height: 480px;
+	/*width: 640px;*/
+	/*height: 480px;*/
+	/*background-color: #000;*/
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
 	background-color: #000;
 }
 
